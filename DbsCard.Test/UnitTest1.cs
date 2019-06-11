@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.IO;
+using System.Collections.Generic;
 
 namespace DbsCard.Test
 {
@@ -64,6 +65,42 @@ namespace DbsCard.Test
                     }
                     await _context.SaveChangesAsync();
                 }
+            }
+        }
+
+        [TestMethod]
+        public async Task Test2()
+        {
+            Assert.IsNotNull(_context);
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+            using (HttpClient client = new HttpClient())
+            {
+                foreach (var card in _context.Cards.Where(x => x.DateDeleted == null && !x.IsSideCard && !x.IsPR))
+                {
+                    var token = card.BaseCardNumber.Split('-');
+                    if(dict.ContainsKey(token[0]))
+                    {
+                        int n = int.Parse(token[1]);
+                        if (dict[token[0]] < n)
+                            dict[token[0]] = n;
+                    }
+                    else
+                    {
+                        dict.Add(token[0], int.Parse(token[1]));
+                    }
+                }
+                
+                using (StreamWriter w = File.AppendText("dict.txt"))
+                {
+                    int total = 0;
+                    foreach (var item in dict.OrderBy(x => x.Key))
+                    {
+                        total += item.Value;
+                        w.WriteLine("[" + item.Key + "] " + "[" + item.Value + "]");
+                    }
+                    w.WriteLine(total);
+                }
+
             }
         }
     }
