@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbsCard.Web", "DbsCard\DbsCard.Web.csproj", "{D1669633-BF05-4A5E-98D8-93B4D0899E5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbsCard.Test", "DbsCard.Test\DbsCard.Test.csproj", "{0BF176A5-FB2E-45A0-8CD6-325645144566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1669633-BF05-4A5E-98D8-93B4D0899E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1669633-BF05-4A5E-98D8-93B4D0899E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1669633-BF05-4A5E-98D8-93B4D0899E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1669633-BF05-4A5E-98D8-93B4D0899E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF176A5-FB2E-45A0-8CD6-325645144566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF176A5-FB2E-45A0-8CD6-325645144566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF176A5-FB2E-45A0-8CD6-325645144566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF176A5-FB2E-45A0-8CD6-325645144566}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5832B5FD-2520-4881-819E-716135E060EB}
+	EndGlobalSection
+EndGlobal

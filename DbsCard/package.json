@@ -1,0 +1,10 @@
+{
+    "name": "clientapp",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "npm run --prefix clientapp/ serve",
+        "build": "npm run --prefix clientapp/ build",
+        "lint": "npm run --prefix clientapp/ lint"
+    }
+}
