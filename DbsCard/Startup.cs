@@ -86,7 +86,11 @@ namespace DbsCard
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "clientapp";
-                spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
+                }
             });
         }
     }
