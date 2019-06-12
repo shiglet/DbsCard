@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbsCard.Web", "DbsCard\DbsC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbsCard.Test", "DbsCard.Test\DbsCard.Test.csproj", "{0BF176A5-FB2E-45A0-8CD6-325645144566}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbsCard.Models", "DbsCard.Models\DbsCard.Models.csproj", "{7FEC8808-9B68-4495-A75C-5A1DBF711E7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbsCard.BusinessComponents", "DbsCard.BusinessComponents\DbsCard.BusinessComponents.csproj", "{48048726-9D3E-43F8-9DAE-1CCF60179198}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0BF176A5-FB2E-45A0-8CD6-325645144566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BF176A5-FB2E-45A0-8CD6-325645144566}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BF176A5-FB2E-45A0-8CD6-325645144566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FEC8808-9B68-4495-A75C-5A1DBF711E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEC8808-9B68-4495-A75C-5A1DBF711E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEC8808-9B68-4495-A75C-5A1DBF711E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEC8808-9B68-4495-A75C-5A1DBF711E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48048726-9D3E-43F8-9DAE-1CCF60179198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48048726-9D3E-43F8-9DAE-1CCF60179198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48048726-9D3E-43F8-9DAE-1CCF60179198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48048726-9D3E-43F8-9DAE-1CCF60179198}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

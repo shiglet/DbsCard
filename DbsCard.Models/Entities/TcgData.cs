@@ -1,8 +1,6 @@
-using DbsCard.Converters;
-using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace DbsCard.Models
+namespace DbsCard.Models.Entities
 {
     public partial class TcgData
     {

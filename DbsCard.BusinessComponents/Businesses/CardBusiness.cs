@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using DbsCard.BusinessComponents.Contracts;
 using DbsCard.Models;
 using DbsCard.Models.Dto;
+using DbsCard.Models.Entities;
 
-namespace DbsCard.BusinessComponents
+namespace DbsCard.BusinessComponents.Businesses
 {
     public class CardBusiness : ICardBusiness
     {

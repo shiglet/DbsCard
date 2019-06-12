@@ -1,9 +1,5 @@
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using DbsCard.Models;
-using Newtonsoft.Json;
-using System.Net.Http;
-using System.Collections.Generic;
+using DbsCard.Models.Entities;
 
 namespace DbsCard.Models
 {

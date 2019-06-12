@@ -1,13 +1,10 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace DbsCard.Converters
+namespace DbsCard.Models.Converters
 {
-    internal static class Converter
+    public static class Converter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

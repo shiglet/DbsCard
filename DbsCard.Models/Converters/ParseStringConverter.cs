@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace DbsCard.Converters
+namespace DbsCard.Models.Converters
 {
     internal class ParseStringConverter : JsonConverter
     {
@@ -12,7 +12,7 @@ namespace DbsCard.Converters
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
             long l;
-            if (Int64.TryParse(value, out l))
+            if (long.TryParse(value, out l))
             {
                 return l;
             }

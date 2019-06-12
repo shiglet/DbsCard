@@ -1,30 +1,5 @@
-namespace DbsCard.Models.Enums
+﻿namespace DbsCard.Models.Enums
 {
-    public enum CardColor
-    {
-        Black,
-        Blue,
-        BlueYellow,
-        Green,
-        Red,
-        RedGreen,
-        Yellow
-    };
-
-    public enum CardRarity
-    {
-        CommonC,
-        DestructionRareDr,
-        ExpansionRareEx,
-        FeatureRareFr,
-        PromotionPr,
-        RareR,
-        SecretRareScr,
-        StarterRareSt,
-        SuperRareSr,
-        UncommonUc
-    };
-
     public enum CardSerie
     {
         ExpansionDeckBoxSet01BrMightyHeroes,
@@ -51,12 +26,5 @@ namespace DbsCard.Models.Enums
         ThemedBoosterBrTheTournamentOfPower,
         ThemedBoosterBrWorldMartialArtsTournament,
         UltimateBox
-    };
-
-    public enum CardType
-    {
-        Battle,
-        Extra,
-        Leader
     };
 }

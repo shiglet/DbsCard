@@ -16,6 +16,8 @@ using DbsCard.Services.AutoMapper;
 using DbsCard.BusinessComponents;
 using DbsCard.BusinessComponents.Contracts;
 using Newtonsoft.Json;
+using DbsCard.BusinessComponents.Businesses;
+using DbsCard.Models.Converters;
 
 namespace DbsCard
 {
@@ -79,7 +81,13 @@ namespace DbsCard
             });
             app.UseHttpsRedirection();
 
-            JsonConvert.DefaultSettings = () => DbsCard.Converters.Converter.Settings;
+            JsonConvert.DefaultSettings = () => Converter.Settings;
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "clientapp";
+                spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
+            });
         }
     }
 }

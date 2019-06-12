@@ -1,12 +1,9 @@
-using Microsoft.EntityFrameworkCore;
 using DbsCard.Models.Enums;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System;
-using DbsCard.Converters;
 using System.ComponentModel.DataAnnotations;
 
-namespace DbsCard.Models    
+namespace DbsCard.Models.Entities
 {
     public class Card
     {
@@ -54,7 +51,7 @@ namespace DbsCard.Models
 
         public string TextMatchScore { get; set; }
         public string CardId { get; set; }
-        
+
         public string BaseCardNumber { get; set; }
 
         public string SkillPlainText { get; set; }
@@ -64,7 +61,7 @@ namespace DbsCard.Models
         public string OctgnId { get; set; }
 
         public long MaxAllowed { get; set; }
-        
+
         public List<TcgData> TcgData { get; set; }
 
         public DateTimeOffset UpdatedOn { get; set; }
@@ -83,8 +80,6 @@ namespace DbsCard.Models
 
         public bool IsSideCard { get; set; }
         public bool IsLeader { get; set; }
-        public DateTime? DateDeleted { get; internal set; }
+        public DateTime? DateDeleted { get; set; }
     }
-
-
 }

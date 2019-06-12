@@ -16,15 +16,66 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove=".vscode\**" />
+    <Compile Remove="bin\**" />
+    <Compile Remove="obj\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove=".vscode\**" />
+    <Content Remove="bin\**" />
+    <Content Remove="obj\**" />
+    <EmbeddedResource Remove=".vscode\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="obj\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove=".vscode\**" />
+    <None Remove="bin\**" />
+    <None Remove="obj\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove=".vscode\launch.json" />
+    <None Remove=".vscode\settings.json" />
+    <None Remove=".vscode\tasks.json" />
+    <None Remove="bin\Debug\netcoreapp2.2\DbsCard.Web.deps.json" />
+    <None Remove="bin\Debug\netcoreapp2.2\DbsCard.Web.dll" />
+    <None Remove="bin\Debug\netcoreapp2.2\DbsCard.Web.pdb" />
+    <None Remove="bin\Debug\netcoreapp2.2\DbsCard.Web.runtimeconfig.dev.json" />
+    <None Remove="bin\Debug\netcoreapp2.2\DbsCard.Web.runtimeconfig.json" />
+    <None Remove="DbsCard.Web.csproj" />
+    <None Remove="DbsCard.Web.csproj.user" />
+    <None Remove="obj\DbsCard.Web.csproj.EntityFrameworkCore.targets" />
+    <None Remove="obj\DbsCard.Web.csproj.nuget.cache" />
+    <None Remove="obj\DbsCard.Web.csproj.nuget.dgspec.json" />
+    <None Remove="obj\DbsCard.Web.csproj.nuget.g.props" />
+    <None Remove="obj\DbsCard.Web.csproj.nuget.g.targets" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.AssemblyInfo.cs" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.AssemblyInfoInputs.cache" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.assets.cache" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.csproj.CoreCompileInputs.cache" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.csproj.FileListAbsolute.txt" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.csprojAssemblyReference.cache" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.dll" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.pdb" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.RazorAssemblyInfo.cache" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.RazorAssemblyInfo.cs" />
+    <None Remove="obj\Debug\netcoreapp2.2\DbsCard.Web.RazorTargetAssemblyInfo.cache" />
+    <None Remove="obj\project.assets.json" />
   </ItemGroup>
 
 
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\DbsCard.BusinessComponents\DbsCard.BusinessComponents.csproj" />
+    <ProjectReference Include="..\DbsCard.Models\DbsCard.Models.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
@@ -34,7 +85,7 @@
     </Exec>
     <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
     <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="yarn install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
   </Target>
 
 </Project>

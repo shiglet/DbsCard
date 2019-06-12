@@ -27,7 +27,7 @@ namespace DbsCard.Test
             _context = _serviceProvider.GetService<AppDbContext>();
         }
         [TestMethod]
-        public async Task TestMethod1()
+        public async Task Add_ImgFrURL_If_Exist()
         {
             Assert.IsNotNull(_context);
             using (StreamWriter w = File.AppendText("log.txt"))
@@ -69,7 +69,7 @@ namespace DbsCard.Test
         }
 
         [TestMethod]
-        public async Task Test2()
+        public async Task Check_Number_Of_Card_Is_Right()
         {
             Assert.IsNotNull(_context);
             Dictionary<string, int> dict = new Dictionary<string, int>();
@@ -97,10 +97,16 @@ namespace DbsCard.Test
                     {
                         total += item.Value;
                         w.WriteLine("[" + item.Key + "] " + "[" + item.Value + "]");
+                        for(int i = 1; i < item.Value;i++)
+                        {
+                            if(_context.Cards.All(x => !x.CardNumber.Contains(item.Key + "-" + i.ToString("D3")) && !x.CardNumber.Contains(item.Key + "-" + i.ToString("D2"))))
+                            {
+                                w.WriteLine($"{ item.Key }-{ i.ToString("D3") } doesn't exist");
+                            }
+                        }
                     }
                     w.WriteLine(total);
                 }
-
             }
         }
     }

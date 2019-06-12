@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System;
 
-namespace DbsCard.Converters
+namespace DbsCard.Models.Converters
 {
     internal class SeriesConverter : JsonConverter
     {

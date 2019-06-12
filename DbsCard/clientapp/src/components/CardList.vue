@@ -44,8 +44,8 @@ export default class CardList extends Vue {
     this.$http
       .get(
         this.action.length <= 0
-          ? "http://localhost:57462/api/Card"
-          : "http://localhost:57462/api/Card/" + this.action
+          ? "/api/Card"
+          : "/api/Card/" + this.action
       )
       .then((response: AxiosResponse) => {
         var cardTemp: Card[] = response.data.map((val: any) => ({

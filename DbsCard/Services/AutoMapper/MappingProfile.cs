@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
-using DbsCard.Models;
 using DbsCard.Models.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using DbsCard.Models.Entities;
 
 namespace DbsCard.Services.AutoMapper
 {

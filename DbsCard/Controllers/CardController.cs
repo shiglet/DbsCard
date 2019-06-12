@@ -39,6 +39,7 @@ namespace DbsCard.Controllers
 
             return Ok(_mapper.Map<IEnumerable<CardDto>>(_cardBusiness.Get()));
         }
+
         [HttpGet]
         public ActionResult<IEnumerable<CardDto>> GetCards()
         {

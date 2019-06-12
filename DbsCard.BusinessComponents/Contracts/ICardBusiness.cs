@@ -1,9 +1,7 @@
 ﻿using DbsCard.Models;
 using DbsCard.Models.Dto;
-using System;
+using DbsCard.Models.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DbsCard.BusinessComponents.Contracts
 {
